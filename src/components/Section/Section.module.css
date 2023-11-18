@@ -1,0 +1,18 @@
+.feedback {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 60px;
+    width: 350px;
+    color: #3d3d3d;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px #cbceceed;
+}
+
+.feedback__title {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 25px 0px;
+}

@@ -1,0 +1,22 @@
+.feedback__container {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0px 60px;
+}
+
+.feedback__btn {
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #f3f6f9;
+    color: #82909e;
+    transition: all 300ms;
+}
+
+.feedback__btn:hover {
+    background-color: #3b507b;
+    color: white;
+}
