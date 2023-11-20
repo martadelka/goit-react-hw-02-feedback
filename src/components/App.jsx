@@ -6,26 +6,22 @@ import { Statistics } from './Statistics/Statistics';
 import { Notification } from './Notification/Notification';
 
 export class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      good: 0,
-      neutral: 0,
-      bad: 0,
-    };
-  }
+  state = {
+    good: 0,
+    neutral: 0,
+    bad: 0,
+  };
 
   countTotalFeedback = () => {
-    return this.state.good + this.state.neutral + this.state.bad;
+    return Object.values(this.state).reduce((acc, option) => acc + option, 0);
   };
 
   countPositiveFeedbackPercentage = () => {
     return Math.round((this.state.good / this.countTotalFeedback()) * 100);
   };
 
-  handleLeaveFeedback = event => {
-   const {name} = event.target;
-   this.setState(state => ({ [name]: state[name] + 1 }));
+  handleLeaveFeedback = option => {
+   this.setState(state => ({ [option]: state[option] + 1 }));
   };
 
   render() {
